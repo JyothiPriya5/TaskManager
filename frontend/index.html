@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Section -->
+    <nav class="navbar">
+      <div class="nav-left">Task Manager</div>
+      <ul class="nav-links">
+        <li><a href="#" onclick="showHome()">Home</a></li>
+        <li><a href="#" onclick="showTasks()">Your Tasks</a></li>
+        <li><a href="#" onclick="showAbout()">About</a></li>
+      </ul>
+    </nav>
+    <!-- HOME PAGE -->
+    <section id="homePage" class="page active">
+      <div class="hero">
+        <h2>Welcome to Task Manager</h2>
+        <p>Manage your work efficiently and stay productive.</p>
+        <button class="start-btn" onclick="showTasks()">Get Started →</button>
+      </div>
+    </section>
+    <!-- TASK PAGE -->
+    <section id="taskPage" class="page">
+      <div class="container">
+        <!-- Add Task -->
+        <div class="card">
+          <h3>Add New Task</h3>
+          <form id="taskForm">
+            <input type="text" id="title" placeholder="Title" required />
+            <input type="text" id="desc" placeholder="Description" required />
+            <select id="status">
+              <option>Pending</option>
+              <option>In Progress</option>
+              <option>Completed</option>
+            </select>
+            <button>Add Task</button>
+          </form>
+        </div>
+        <!-- Task List -->
+        <div class="card">
+          <h3>Your Tasks</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="taskList"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT PAGE -->
+    <section id="aboutPage" class="page">
+      <div class="about">
+        <h2>About</h2>
+        <p>
+          This project is built using HTML, CSS, JavaScript, Node.js, Express,
+          and MongoDB.
+        </p>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
