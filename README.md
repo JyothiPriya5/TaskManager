@@ -44,7 +44,7 @@ Make sure the following are installed on your system:
 - Node.js
 - MongoDB
 - Git
-- VS Code (Recommended)
+- VS Code
 
 ---
 
